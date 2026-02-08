@@ -14,8 +14,11 @@ import tailwindcss from './assets/tailwindcss.svg';
 import Arduino from './assets/Arduino.svg';
 import C from './assets/C.svg';
 import mysql from './assets/mysql.svg';
-import one from './assets/project1/1.png';
-import two from './assets/project1/2.png';
+import GreenHouse from './assets/project1/GreenHouse.png';
+import lms from './assets/project1/lms.png';
+import signLanguage from './assets/project1/signLanguage.png';
+import ids from './assets/project1/ids.jpg';
+import Dear from './assets/project1/DEAR.png';
 import ibm_container from './assets/certs/ibm_container.png';
 import aws from './assets/certs/aws.png';
 import ibm_cloud from './assets/certs/ibm_cloud.png';
@@ -98,6 +101,7 @@ function ProjectCard({
   description,
   techs = [],
   link,
+  link2,
   dataAos,
 }) {
   const visibleTechs = techs.slice(0, 4);
@@ -129,10 +133,6 @@ function ProjectCard({
 
         {/* Title + chips */}
         <div className="absolute inset-x-0 bottom-0 p-5">
-          <h3 className="text-lg md:text-xl font-semibold text-white tracking-tight">
-            {title}
-          </h3>
-
           <div className="mt-3 flex flex-wrap gap-2">
             {visibleTechs.map((t) => (
               <span
@@ -153,7 +153,11 @@ function ProjectCard({
 
       {/* Body */}
       <div className="p-5">
-        <p className="text-sm leading-relaxed text-zinc-300 line-clamp-3">
+        <h3 className="text-lg md:text-xl font-semibold text-cyan-500 tracking-tight">
+            {title}
+        </h3>
+
+        <p className="text-sm text-zinc-300">
           {description}
         </p>
 
@@ -187,13 +191,37 @@ function ProjectCard({
               Demo coming soon
             </span>
           )}
+          {link2 && (
+            <a
+              href={link2}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-cyan-400/25 bg-cyan-400/10 px-4 py-2.5 text-sm font-semibold text-cyan-200 transition hover:border-cyan-400/40 hover:bg-cyan-400/15"
+            >
+              see more
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          )}
 
-          {/* {repo && (
+          {/* {repo!='' && (
             <a
               href={repo}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-zinc-200 transition hover:border-white/20 hover:bg-white/7"
+              className="inline-flex items-center cursor-pointer gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-zinc-200 transition hover:border-white/20 hover:bg-white/7"
             >
               GitHub
               <svg
@@ -219,59 +247,56 @@ ProjectCard.propTypes = {
   description: PropTypes.string.isRequired,
   techs: PropTypes.arrayOf(PropTypes.string).isRequired,
   link: PropTypes.string,
+  link2: PropTypes.string,
   dataAos: PropTypes.string,
 };
 
 // Add or remove projects here — set `link` to your live demo or repo URL
 const PROJECTS = [
   {
-    image: one,
+    image: GreenHouse,
     title: 'Greenhouse Automation System',
     description:
       'IoT-based autonomous greenhouse system with real-time monitoring and automated control of environmental parameters. Includes cloud-integrated backend, mobile application, and embedded hardware for smart agriculture use cases.',
     techs: ['Spring Boot', 'AWS IoT', 'MQTT', 'WebSockets', 'React Native', 'MySQL', 'ESP32'],
-    link: 'https://github.com/cepdnaclk/e20-3yp-Green-House-Automation',
-    repo: 'https://github.com/cepdnaclk/e20-3yp-Green-House-Automation',
+    link: 'https://cepdnaclk.github.io/e20-3yp-Green-House-Automation/',
     status: 'Ongoing',
   },
   {
-    image: two,
+    image: lms,
     title: 'Leave & Transfer Management System',
     description:
       'Full-stack management system developed for the University of Peradeniya to streamline non-academic staff leave and transfer workflows. Replaced manual processes with configurable approval pipelines and role-based dashboards.',
     techs: ['React', 'Spring Boot', 'MySQL', 'JWT', 'Git'],
     link: 'https://github.com/Vithustennysan8/Non-academic-staff',
-    repo: 'https://github.com/Vithustennysan8/Non-academic-staff',
+    link2: 'https://github.com/Vithustennysan8/Non-academic-staff-BackEnd',
     status: 'Completed',
   },
   {
-    image: three,
+    image: signLanguage,
     title: 'Sign Language Recognition Platform',
     description:
       'Real-time sign language recognition platform supporting static and dynamic hand gestures. Uses deep learning models for gesture classification and provides an interactive web interface for live recognition.',
     techs: ['React', 'Flask', 'TensorFlow', 'OpenCV', 'LSTM'],
     link: 'https://github.com/Vithustennysan8/Sign-Language-Recognition',
-    repo: 'https://github.com/Vithustennysan8/Sign-Language-Recognition',
     status: 'Completed',
   },
   {
-    image: four,
+    image: ids,
     title: 'Hierarchical Hybrid Intrusion Detection System',
     description:
       'Ongoing research project focused on detecting zero-day and unknown cyber attacks using a hierarchical hybrid IDS architecture combining anomaly detection, supervised learning, and active learning techniques.',
     techs: ['Python', 'TensorFlow', 'PyTorch', 'scikit-learn', 'Wireshark'],
     link: 'https://github.com/cepdnaclk/e20-4yp-A-Hierarchical-Hybrid-Framework-for-Intrusion-Detection-in-Network-and-Application-Layers',
-    repo: 'https://github.com/cepdnaclk/e20-4yp-A-Hierarchical-Hybrid-Framework-for-Intrusion-Detection-in-Network-and-Application-Layers',
     status: 'Ongoing',
   },
   {
-    image: five,
+    image: Dear,
     title: 'DEAR – Data Engineering & Research Website',
     description:
       'Official landing page for the Data Engineering and Research (DEAR) group at the University of Peradeniya, showcasing research projects, faculty profiles, and student engagement opportunities.',
     techs: ['HTML', 'CSS', 'JavaScript', 'Git'],
-    link: 'https://github.com/Vithustennysan8',
-    repo: 'https://github.com/Vithustennysan8',
+    link: 'https://github.com/Vithustennysan8/Research_Website_new',
     status: 'Completed',
   },
 ];
@@ -518,6 +543,7 @@ function App() {
                   description={project.description}
                   techs={project.techs}
                   link={project.link}
+                  link2={project.link2}
                   dataAos="fade-up"
                 />
               ))}
