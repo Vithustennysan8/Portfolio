@@ -564,7 +564,7 @@ function App() {
 
               <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Certificate Card */}
-                <div className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
+                <div data-aos="fade-up" className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
                   <div className="flex items-center gap-4">
                     <img
                       src={aws}
