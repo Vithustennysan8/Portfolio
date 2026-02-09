@@ -598,7 +598,7 @@ function App() {
                 </div>
 
                 {/* Certificate Card */}
-                <div className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
+                <div data-aos="fade-up" className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
                   <div className="flex items-center gap-4">
                     <img
                       src={ibm_container}
@@ -632,7 +632,7 @@ function App() {
                 </div>
 
                 {/* Certificate Card */}
-                <div className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
+                <div data-aos="fade-up" className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
                   <div className="flex items-center gap-4">
                     <img
                       src={ibm_cloud}
@@ -666,7 +666,7 @@ function App() {
                 </div>
                 
                 {/* Certificate Card */}
-                <div className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
+                <div data-aos="fade-up" className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
                   <div className="flex items-center gap-4">
                     <img
                       src={web_development}
@@ -699,7 +699,7 @@ function App() {
                 </div>
                 
                 {/* Certificate Card */}
-                <div className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
+                <div data-aos="fade-up" className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
                   <div className="flex items-center gap-4">
                     <img
                       src={python_cert}
@@ -732,7 +732,7 @@ function App() {
                 </div>
                 
                 {/* Certificate Card */}
-                <div className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
+                <div data-aos="fade-up" className="group rounded-2xl border border-white/[0.08] bg-zinc-900/60 backdrop-blur p-5 hover:border-cyan-400/40 transition">
                   <div className="flex items-center gap-4">
                     <img
                       src={uiux}
@@ -768,7 +768,7 @@ function App() {
           </section>
 
           {/* Contact */}
-          <section id="contact" className="py-16 md:py-24">
+          <section data-aos="fade-up" id="contact" className="py-16 md:py-24">
             <h2 className="section-heading text-center mb-4">Contact</h2>
             <p className="text-zinc-400 text-center max-w-xl mx-auto mb-10">
               Get in touch — I&apos;m happy to help and collaborate.
