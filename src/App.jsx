@@ -1,5 +1,5 @@
 import './App.css';
-import CV from "./assets/cv/Vithushan_CV.pdf";
+import CV from "./assets/cv/Vithushan_ETL_CV.pdf";
 import profile from './assets/profile.png';
 import react from './assets/react.svg';
 import python from './assets/python.svg';
@@ -353,7 +353,7 @@ function App() {
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <a href="#about" className="btn-primary">About me</a>
-                  <a href={CV} download="Vithushan_CV" className="btn-secondary">Download CV</a>
+                  <a href={CV} download="Vithushan_ETL_CV" className="btn-secondary">Download CV</a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-4 mt-8">
                   <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/vithushan-e-t-l-265a072a1/" className="text-zinc-500 hover:text-cyan-400 transition-colors" aria-label="LinkedIn">
